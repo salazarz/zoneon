@@ -32,6 +32,10 @@ class User extends Authenticatable
         return $this->hasMany(Transaction::class);
     }
 
+    public function banner(){
+        return $this->hasMany(Banner::class);
+    }
+
     public function review(){
         return $this->hasOne(Review::class);
     }

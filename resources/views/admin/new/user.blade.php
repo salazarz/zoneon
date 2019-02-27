@@ -62,13 +62,19 @@
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
 									@if (session('status'))
-						                <div class="alert alert-success" role="alert">
-						                    {{ session('status') }}
-						                </div>
+						                <div class="alert alert-success alert-dismissable" role="alert">
+		                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		                                    <i class="zmdi zmdi-check pr-15 pull-left"></i>
+		                                    <p class="pull-left">{{ session('success') }}</p> 
+		                                    <div class="clearfix"></div>
+		                                </div>
 						            @elseif (session('success'))
-						                <div class="alert alert-success" role="success">
-						                    {{ session('success') }}
-						                </div>
+						                <div class="alert alert-success alert-dismissable" role="alert">
+		                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		                                    <i class="zmdi zmdi-check pr-15 pull-left"></i>
+		                                    <p class="pull-left">{{ session('success') }}</p> 
+		                                    <div class="clearfix"></div>
+		                                </div>
 						            @endif
 									<div class="table-wrap">
 										<div class="table-responsive">

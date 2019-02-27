@@ -8,6 +8,7 @@ use App\ProductCategory;
 use App\ProductImage;
 use App\Review;
 use App\Transaction;
+use App\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -206,7 +207,11 @@ class ProductController extends Controller
     {
         $products = Product::all();
         $categories = ProductCategory::all();
-        return view('index', compact(['products', 'categories']))->with('success', 'Order will be proceded when you have pay the bills');
+        $carousel = Banner::where('category','carousel')->get();
+        $banner1 = Banner::where('category','banner1')->first();
+        $banner2 = Banner::where('category','banner2')->first();
+        $footer = Banner::where('category','footer')->first();
+        return view('index', compact(['products', 'categories','carousel','banner1','banner2','footer']))->with('success', 'Order will be proceded when you have pay the bills');
     }
 
     public function dashboard(Product $product)

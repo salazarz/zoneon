@@ -36,6 +36,9 @@ Route::middleware('auth')->group(function(){
 //Review
     Route::resource('review','ReviewController');
 
+//Banner
+    Route::resource('banner','BannerController');
+
 //order history
     Route::resource('order','DetailTransactionController');
 

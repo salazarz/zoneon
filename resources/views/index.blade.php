@@ -29,22 +29,22 @@
 
             <!-- Home Slider -->
             <div class="owl-carousel owl-theme home_slider">
-
+            @foreach($carousel as $data)    
                 <!-- Slider Item -->
                 <div class="owl-item home_slider_item">
                     <div class="home_slider_background"
-                         style="background-image:url({{asset('sublime/images/home_slider_1.jpg')}})"></div>
+                         style="background-image:url({{asset('storage/'.$data->image)}})"></div>
                     <div class="home_slider_content_container">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
                                     <div class="home_slider_content" data-animation-in="fadeIn"
                                          data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur
+                                        <div class="home_slider_title">{{$data->desc}}</div>
+                                        {{-- <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur
                                             adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed
                                             viverra velit venenatis fermentum luctus.
-                                        </div>
+                                        </div> --}}
                                         <div class="button button_light home_button"><a href="#">Shop Now</a></div>
                                     </div>
                                 </div>
@@ -52,53 +52,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Slider Item -->
-                <div class="owl-item home_slider_item">
-                    <div class="home_slider_background"
-                         style="background-image:url({{asset('sublime/images/home_slider_1.jpg')}})"></div>
-                    <div class="home_slider_content_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_slider_content" data-animation-in="fadeIn"
-                                         data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed
-                                            viverra velit venenatis fermentum luctus.
-                                        </div>
-                                        <div class="button button_light home_button"><a href="#">Shop Now</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slider Item -->
-                <div class="owl-item home_slider_item">
-                    <div class="home_slider_background"
-                         style="background-image:url({{asset('sublime/images/home_slider_1.jpg')}})"></div>
-                    <div class="home_slider_content_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_slider_content" data-animation-in="fadeIn"
-                                         data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed
-                                            viverra velit venenatis fermentum luctus.
-                                        </div>
-                                        <div class="button button_light home_button"><a href="#">Shop Now</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            @endforeach
             </div>
 
             <!-- Home Slider Dots -->
@@ -128,7 +82,7 @@
         <div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
             <div class="avds_small">
                 <div class="avds_background"
-                     style="background-image:url({{asset('sublime/images/avds_small.jpg')}})"></div>
+                     style="background-image:url({{asset('Storage/'.$banner1->image)}})"></div>
                 <div class="avds_small_inner">
                     <div class="avds_discount_container">
                         <img src="{{asset('sublime/images/discount.png')}}" alt="">
@@ -140,20 +94,20 @@
                         </div>
                     </div>
                     <div class="avds_small_content">
-                        <div class="avds_title">Smart Phones</div>
+                        <div class="avds_title">{{$banner1->desc}}</div>
                         <div class="avds_link"><a href="categories.html">See More</a></div>
                     </div>
                 </div>
             </div>
             <div class="avds_large">
                 <div class="avds_background"
-                     style="background-image:url({{asset('sublime/images/avds_large.jpg')}})"></div>
+                     style="background-image:url({{asset('Storage/'.$banner2->image)}})"></div>
                 <div class="avds_large_container">
                     <div class="avds_large_content">
-                        <div class="avds_title">Professional Cameras</div>
-                        <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+                        <div class="avds_title">{{$banner2->desc}}</div>
+                        {{-- <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
                             ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.
-                        </div>
+                        </div> --}}
                         <div class="avds_link avds_link_large"><a href="categories.html">See More</a></div>
                     </div>
                 </div>
@@ -202,12 +156,12 @@
                 <div class="col">
                     <div class="avds_xl_container clearfix">
                         <div class="avds_xl_background"
-                             style="background-image:url({{asset('sublime/images/avds_xl.jpg')}})"></div>
+                             style="background-image:url({{asset('Storage/'.$footer->image)}})"></div>
                         <div class="avds_xl_content">
-                            <div class="avds_title">Amazing Devices</div>
-                            <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+                            <div class="avds_title">{{$footer->desc}}</div>
+                            {{-- <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
                                 ultricies metus.
-                            </div>
+                            </div> --}}
                             <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
                         </div>
                     </div>
@@ -226,7 +180,7 @@
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
                         <div class="icon_box_image"><img src="{{asset('sublime/images/icon_1.svg')}}" alt=""></div>
-                        <div class="icon_box_title">Free Shipping Worldwide</div>
+                        <div class="icon_box_title">Free Shipping Nusantara</div>
                         <div class="icon_box_text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed
                                 nec molestie.</p>

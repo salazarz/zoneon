@@ -43,6 +43,14 @@
                 <div class="clearfix"></div>
             </a>
         </li>
+        <li>
+            <a href="{{route('banner.index')}}">
+                <div class="pull-left"><i class="zmdi zmdi-star mr-20"></i><span
+                            class="right-nav-text">Banner </span>
+                </div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
 
         <li>
             <hr class="light-grey-hr mb-10"/>
